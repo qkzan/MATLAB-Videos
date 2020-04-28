@@ -1,7 +1,8 @@
 %% Point select area of the original video and choose the time to save a new video
 
 clear
-[file,path]=uigetfile('*.wmv');
+[file,path]=uigetfile({'*.wmv;*.avi' 'Video file'},'Select the video','C:\');
+
 % %
 vidObj = VideoReader([path '\' file]);
 t0 = vidObj.CurrentTime;
